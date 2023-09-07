@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+nav {
+  background-color: #1f2937;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+  padding: 0 20px;
+}
+
+body {
+  background-color: #f7b017;
+}
+
+button {
+  cursor: pointer;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@keyframes jumpUp {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-5rem);
+  }
+
+  50% {
+    transform: translateY(-3rem);
+  }
+  70% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.logo {
+  width: 6rem;
+  margin-right: auto;
+  margin-top: 3rem;
+  animation: jumpUp 0.5s linear infinite;
+}
+
+.links {
+  background: transparent;
+  position: absolute;
+  right: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: #eee;
+  margin: 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+a {
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #010e13;
+  padding: 0 0.25rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-transform: capitalize;
+}
+a:hover {
+  box-shadow: inset 10rem 0 0 0 #54b3d6;
+  color: white;
+}
+header {
+  background-color: #1f2937;
+  display: flex;
+  justify-content: center;
+  padding-top: 15rem;
+  height: 80vh;
+  transition: transform 0.5s linear;
+  transform-origin: top left;
+}
+header.show-nav {
+  transform: rotate(6deg);
+}
+
+.hero-titel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 25rem;
+  gap: 2rem;
+  margin-top: 10rem;
+}
+.hero-titel h1 {
+  color: #eeb335;
+  font-size: 5.2rem;
+  width: 80%;
+  animation: moveToRight 0.4s linear;
+}
+.hero-titel p {
+  color: #ccc;
+  text-align: center;
+  width: 70%;
+  line-height: 2.5rem;
+  font-size: 2rem;
+  letter-spacing: 1.2px;
+}
+.hero-img {
+  height: 100%;
+  margin-right: 20rem;
+  box-shadow: 7px 13px 21px 0px rgba(235, 195, 235, 0.4);
+}
+
+.btn-1,
+.btn-2 {
+  padding: 15px 40px;
+  margin-top: 2rem;
+  border-radius: 10rem;
+  font-size: 1.8rem;
+  letter-spacing: 1.9px;
+  color: white;
+  font-weight: 600;
+  background-color: rgb(202, 5, 22);
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* second part */
+.pics-section {
+  background-color: #1f2937;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.pics-section h2 {
+  text-align: center;
+  margin-top: 1rem;
+  text-transform: capitalize;
+  color: #b88311;
+  font-weight: 800;
+  font-size: 2.9rem;
+}
+.pics {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.pics {
+  display: flex;
+  gap: 20px;
+  width: 70vw;
+}
+.card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 90vh;
+  border-radius: 20px;
+  flex: 0.5;
+  position: relative;
+  transition: flex 0.3s ease-in;
+  cursor: pointer;
+}
+
+.card.active {
+  flex: 5;
+  border-radius: 20px;
+  background-size: 75%;
+}
+
+/* third part */
+.quote-section {
+  background-color: #e5e7eb;
+  padding: 5rem;
+}
+.quote-section p {
+  font-size: 3.6rem;
+  font-weight: 800;
+  color: #1f2937;
+  font-style: italic;
+  width: 90%;
+  text-align: center;
+}
+
+.quote-section h4 {
+  text-align: right;
+  font-style: italic;
+}
+
+/* fourth part */
+.cta {
+  background-color: #1f2937;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+}
+
+.cta div {
+  background-color: #3882f6;
+  padding: 2.5rem 3rem;
+  border-radius: 1rem;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-head {
+  font-size: 2.2rem;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+.cta-par {
+  color: #ddd;
+  margin-bottom: 1rem;
+  font-size: 1.9rem;
+}
+
+/* last part */
+footer {
+  background-color: #1f2937;
+  height: 3rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
